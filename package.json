@@ -1,0 +1,22 @@
+{
+  "name": "graphiy.transform",
+  "version": "0.0.1",
+  "description": "jquery plugin for css transform manipulation",
+  "main": "transform.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Graphiy/transform"
+  },
+  "keywords": [
+    "css transform"
+  ],
+  "author": {
+    "name": "Dmitra",
+    "email": "adrian@dmitra.com"
+  },
+  "license": "MIT",
+  "peerDependencies": {
+    "jquery": "^3.x.x",
+    "lodash": "^4.x.x"
+  }
+}
