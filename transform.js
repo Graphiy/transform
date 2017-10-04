@@ -4,7 +4,7 @@ $.fn.translateX = function (x) {
   const newY = matrix[5]
   const newScale = matrix[0]
   if (x === undefined) return newX
-  this.transform(newX, newY, newScale)
+  return this.transform(newX, newY, newScale)
 }
 
 $.fn.translateY = function (y) {
@@ -13,7 +13,7 @@ $.fn.translateY = function (y) {
   const newY = _.isNumber(y) ? y : matrix[5]
   const newScale = matrix[0]
   if (y === undefined) return newY
-  this.transform(newX, newY, newScale)
+  return this.transform(newX, newY, newScale)
 }
 
 $.fn.translate = function (x, y) {
@@ -22,7 +22,7 @@ $.fn.translate = function (x, y) {
   const newY = _.isNumber(y) ? y : matrix[5]
   const newScale = matrix[0]
   if (y === undefined && y === undefined) return [newX, newY]
-  this.transform(newX, newY, newScale)
+  return this.transform(newX, newY, newScale)
 }
 
 $.fn.scale = function (scale) {
@@ -31,7 +31,7 @@ $.fn.scale = function (scale) {
   const newY = matrix[5]
   const newScale = scale || matrix[0]
   if (scale === undefined) return newScale
-  this.transform(newX, newY, newScale)
+  return this.transform(newX, newY, newScale)
 }
 
 $.fn.transform = function (_x, _y, _scale, ...args) {
@@ -45,5 +45,5 @@ $.fn.transform = function (_x, _y, _scale, ...args) {
 
   if (_.isEmpty(arguments)) return matrix
 
-  this.css('transform', `matrix(${matrix.join(',')})`)
+  return this.css('transform', `matrix(${matrix.join(',')})`)
 }

@@ -1,22 +1,42 @@
 {
-  "name": "graphiy.transform",
-  "version": "0.0.1",
+  "name": "@graphiy/transform",
+  "version": "0.1.0",
   "description": "jquery plugin for css transform manipulation",
+  "keywords": [
+    "css transform"
+  ],
+  "homepage": "https://github.com/graphiy/transform#readme",
+  "license": "MIT",
+  "author": "Graphiy",
   "main": "transform.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/Graphiy/transform"
   },
-  "keywords": [
-    "css transform"
-  ],
-  "author": {
-    "name": "Dmitra",
-    "email": "adrian@dmitra.com"
+  "scripts": {
+    "lint": "eslint . --ignore-path .gitignore",
+    "pretest": "yarn lint",
+    "test": "jest"
   },
-  "license": "MIT",
+  "eslintConfig": {
+    "env": {
+      "browser": true,
+      "jest": true
+    },
+    "extends": "@graphiy/eslint-config",
+    "globals": {
+      "_": true,
+      "$": true
+    }
+  },
+  "devDependencies": {
+    "@graphiy/eslint-config": "graphiy/eslint-config",
+    "eslint": "^4.8.0",
+    "jest": "^21.2.1"
+  },
   "peerDependencies": {
     "jquery": "^3.x.x",
     "lodash": "^4.x.x"
-  }
+  },
+  "precommit": "test"
 }
