@@ -47,3 +47,16 @@ $.fn.transform = function (_x, _y, _scale, ...args) {
 
   return this.css('transform', `matrix(${matrix.join(',')})`)
 }
+
+$.fn.rotationDegrees = function () {
+  const matrix = this.css('transform')
+  let angle
+
+  if (typeof matrix === 'string' && matrix !== 'none') {
+    const values = matrix.split('(')[1].split(')')[0].split(',')
+    const a = values[0]
+    const b = values[1]
+    angle = Math.round(Math.atan2(b, a) * (180 / Math.PI))
+  } else { angle = 0 }
+  return (angle < 0) ? angle + 360 : angle
+}
