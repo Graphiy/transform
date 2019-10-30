@@ -1,7 +1,7 @@
 {
   "name": "@graphiy/transform",
-  "version": "0.1.0",
-  "description": "jquery plugin for css transform manipulation",
+  "version": "0.3.0",
+  "description": "functions and jquery plugin for css transform manipulation",
   "keywords": [
     "css transform"
   ],
@@ -31,8 +31,10 @@
   },
   "devDependencies": {
     "@graphiy/eslint-config": "^0.1.0",
-    "eslint": "^4.19.1",
-    "jest": "^23.1.0"
+    "eslint": "^6.3.0",
+    "jest": "^24.9.0",
+    "jquery": "^3.4.1",
+    "lodash": "^4.17.15"
   },
   "peerDependencies": {
     "jquery": "^3.x.x",
